@@ -1,3 +1,4 @@
+/* eslint no-use-before-define: "off" */
 // Retrieving the books from localStorage or create a new empty array
 let allBooks = JSON.parse(localStorage.getItem('allBooks')) || [];
 
@@ -13,9 +14,7 @@ function showBooks() {
     list2.textContent = `${book.authorName}`;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', () =>
-      removeBooks(book.title, book.authorName)
-    );
+    removeButton.addEventListener('click', () => removeBooks(book.title, book.authorName));
     list.appendChild(list1);
     list.appendChild(list2);
     list.appendChild(removeButton);
@@ -28,7 +27,7 @@ function showBooks() {
 // remove a book
 function removeBooks(title, author) {
   allBooks = allBooks.filter(
-    (book) => book.title !== title || book.authorName !== author
+    (book) => book.title !== title || book.authorName !== author,
   );
   localStorage.setItem('allBooks', JSON.stringify(allBooks));
   showBooks();
