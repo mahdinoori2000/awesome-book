@@ -13,10 +13,10 @@ ul {
 }
 
 .add-book input {
-    width: 50%;
+    width: 20%;
     margin-bottom: 2%;
 }
 
 .add-book button {
-    width: 20%;
+    width: 10%;
 }
