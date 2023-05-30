@@ -8,15 +8,12 @@ function showBooks() {
   booksList.innerHTML = '';
   allBooks.forEach((book) => {
     const list1 = document.createElement('span');
-    const list2 = document.createElement('span');
     const list = document.createElement('li');
-    list1.textContent = `${book.title}`;
-    list2.textContent = `${book.authorName}`;
+    list1.textContent = `"${book.title}" by ${book.authorName}`;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => removeBooks(book.title, book.authorName));
     list.appendChild(list1);
-    list.appendChild(list2);
     list.appendChild(removeButton);
     booksList.appendChild(list);
 
