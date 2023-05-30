@@ -2,6 +2,28 @@ span {
   display: block;
 }
 
+.awesome-books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.awesome-books h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.awesome-books button {
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    box-shadow: 1px 2px;
+}
+
+.add-button {
+    text-align: end;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -13,10 +35,7 @@ ul {
 }
 
 .add-book input {
-  width: 20%;
-  margin-bottom: 2%;
-}
-
-.add-book button {
-  width: 10%;
+  margin-bottom: 4%;
+  border-radius: 0.4rem;
+  width: 15rem;
 }
