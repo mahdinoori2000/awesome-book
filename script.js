@@ -1,5 +1,6 @@
 // Retrieving the books from localStorage or create a new empty array
 let allBooks = JSON.parse(localStorage.getItem('allBooks')) || [];
+
 // Show Books
 function showBooks() {
   const booksList = document.getElementById('book-list');
@@ -12,7 +13,9 @@ function showBooks() {
     list2.textContent = `${book.authorName}`;
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.addEventListener('click', () => removeBooks(book.title, book.authorName));
+    removeButton.addEventListener('click', () =>
+      removeBooks(book.title, book.authorName)
+    );
     list.appendChild(list1);
     list.appendChild(list2);
     list.appendChild(removeButton);
@@ -22,8 +25,17 @@ function showBooks() {
     booksList.appendChild(hr);
   });
 }
+// remove a book
+function removeBooks(title, author) {
+  allBooks = allBooks.filter(
+    (book) => book.title !== title || book.authorName !== author
+  );
+  localStorage.setItem('allBooks', JSON.stringify(allBooks));
+  showBooks();
+}
 // Add book
-function addBooks() {
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', () => {
   const titleInput = document.getElementById('title');
   const authorInput = document.getElementById('author');
   const title = titleInput.value;
@@ -36,14 +48,5 @@ function addBooks() {
     authorInput.value = '';
     showBooks();
   }
-}
-// remove a book
-function removeBooks(title, author) {
-  allBooks = allBooks.filter(
-    (book) => book.title !== title || book.authorName !== author,
-  );
-  localStorage.setItem('allBooks', JSON.stringify(allBooks));
-  showBooks();
-}
-
+});
 showBooks();

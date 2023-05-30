@@ -1,22 +1,22 @@
 span {
-    display: block;
+  display: block;
 }
 
 ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .add-book {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-book input {
-    width: 20%;
-    margin-bottom: 2%;
+  width: 20%;
+  margin-bottom: 2%;
 }
 
 .add-book button {
-    width: 10%;
+  width: 10%;
 }
