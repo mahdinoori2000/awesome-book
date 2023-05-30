@@ -16,3 +16,11 @@ function addBooks() {
     showBooks();
   }
 }
+// remove a book
+function removeBooks(title, author) {
+  allBooks = allBooks.filter(
+    (book) => book.title !== title || book.authorName !== author
+  );
+  localStorage.setItem('allBooks', JSON.stringify(allBooks));
+  showBooks();
+}
