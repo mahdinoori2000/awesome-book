@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="navbar">
+      <div class="navbar-name">
+        <h1>Awesome Books</h1>
+      </div>
+      <ul class="navbar-ul">
+        <li><a href="#" id="list-section-btn">Book List</a></li>
+        <li><a href="#" id="add-section-btn">Add Book</a></li>
+        <li><a href="#" id="contact-section-btn">Contact</a></li>
+      </ul>
+    </header>
     <main class="awesome-books">
-      <h1>Awesome Books</h1>
-      <ul id="book-list"></ul>
-      <div class="add">
+      <section class="list">
+        <h1>Awesome Books</h1>
+        <ul id="book-list"></ul>
+      </section>
+      <section class="add hidden">
         <h1>Add a new book</h1>
         <article class="add-book">
           <input type="text" id="title" placeholder="Title" />
@@ -20,8 +32,27 @@
             <button class="add-btn" id="add-btn">Add</button>
           </div>
         </article>
-      </div>
+      </section>
+      <section class="contact hidden">
+        <h1>Contact Information</h1>
+        <p>Do you have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul class="contact-ul">
+          <li class="contact-list">
+            Our email: mahdinoori2389@gmail.com & zuhebahmed101625@gmail.com
+          </li>
+          <li class="contact-list">
+            Our Phone numbers: +93730232389 & +8801531762436
+          </li>
+          <li class="contact-list">
+            Our address: Kabul, Afghanistan & Dhaka, Bangladesh
+          </li>
+        </ul>
+      </section>
     </main>
+    <footer class="copyright">
+      <h2 class="copytight-header">Copyright</h2>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
