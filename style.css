@@ -30,8 +30,8 @@ span {
   text-align: end;
 }
 
-ul {
-  width: 25rem;
+#book-list {
+  width: 25rem;  
   list-style: none;
   padding-left: 0;
   border: 2px solid #2b2d42;
@@ -62,4 +62,35 @@ ul {
 .list-item span {
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #2b2d42;
+  box-shadow: 1px 2px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.navbar-ul {
+  display: flex;
+}
+
+.navbar-ul a {
+  text-decoration: none;
+  margin-top: 0.2rem;
+}
+
+.navbar-ul li {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  list-style: none;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  margin: 0.2rem;
+  border-right: 2px solid #2b2d42;
 }
