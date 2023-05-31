@@ -1,9 +1,11 @@
 span {
   display: block;
 }
+
 .hidden {
   display: none;
 }
+
 .awesome-books {
   display: flex;
   flex-direction: column;
@@ -23,9 +25,11 @@ span {
   box-shadow: 1px 2px;
   background-color: aliceblue;
 }
+
 .add {
   margin-top: 4rem;
 }
+
 .add-btn {
   width: 37.91%;
   background-color: aliceblue;
@@ -103,6 +107,7 @@ span {
   margin: 0.2rem;
   border-right: 2px solid #2b2d42;
 }
+
 /* COPYTIGT SECTION  */
 .copyright {
   border: 2px solid #2b2d42;
@@ -110,6 +115,7 @@ span {
   margin-left: 2%;
   margin-right: 2%;
 }
+
 .copytight-header {
   padding: 10px 20px;
 }

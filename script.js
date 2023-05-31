@@ -23,7 +23,7 @@ class BookCollection {
 
   removeBook(title, author) {
     this.allBooks = this.allBooks.filter(
-      (book) => book.title !== title || book.authorName !== author
+      (book) => book.title !== title || book.authorName !== author,
     );
     this.saveCollection();
     this.showBooks();
@@ -40,9 +40,7 @@ class BookCollection {
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
       removeButton.classList.add('remove-btn');
-      removeButton.addEventListener('click', () =>
-        this.removeBook(book.title, book.authorName)
-      );
+      removeButton.addEventListener('click', () => this.removeBook(book.title, book.authorName));
       list.appendChild(list1);
       list.appendChild(removeButton);
       booksList.appendChild(list);
@@ -72,17 +70,17 @@ const listSection = document.querySelector('.list');
 const addSection = document.querySelector('.add');
 const contactSection = document.querySelector('.contact');
 
-navListBtn.addEventListener('click', function () {
+navListBtn.addEventListener('click', () => {
   listSection.classList.remove('hidden');
   addSection.classList.add('hidden');
   contactSection.classList.add('hidden');
 });
-navAddBtn.addEventListener('click', function () {
+navAddBtn.addEventListener('click', () => {
   listSection.classList.add('hidden');
   addSection.classList.remove('hidden');
   contactSection.classList.add('hidden');
 });
-navContactBtn.addEventListener('click', function () {
+navContactBtn.addEventListener('click', () => {
   listSection.classList.add('hidden');
   addSection.classList.add('hidden');
   contactSection.classList.remove('hidden');
