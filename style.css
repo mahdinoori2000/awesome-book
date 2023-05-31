@@ -81,9 +81,11 @@ span {
 
 .navbar-ul {
   display: flex;
+  align-items: center;
 }
 
 .navbar-ul a {
+  color: #000;
   text-decoration: none;
   margin-top: 0.2rem;
 }
