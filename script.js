@@ -82,4 +82,8 @@ navAddBtn.addEventListener('click', function () {
   addSection.classList.remove('hidden');
   contactSection.classList.add('hidden');
 });
-navContactBtn.addEventListener('click');
+navContactBtn.addEventListener('click', function () {
+  listSection.classList.add('hidden');
+  addSection.classList.add('hidden');
+  contactSection.classList.remove('hidden');
+});
