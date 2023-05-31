@@ -113,3 +113,12 @@ span {
 .copytight-header {
   padding: 10px 20px;
 }
+
+.contact p {
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-list {
+  font-weight: 700;
+}
