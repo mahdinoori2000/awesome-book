@@ -18,6 +18,29 @@ class BookCollection {
       this.showBooks();
     }
   }
+  removeBook(title, author) {
+    this.allBooks = this.allBooks.filter(book => book.title !== title || book.authorName !== author);
+    this.saveCollection();
+    this.showBooks();
+  }
+
+  showBooks() {
+    const booksList = document.getElementById('book-list');
+    booksList.innerHTML = '';
+    this.allBooks.forEach((book) => {
+      const list1 = document.createElement('span');
+      const list = document.createElement('li');
+      list.classList.add('list-item');
+      list1.textContent = `"${book.title}" by ${book.authorName}`;
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.classList.add('remove-btn');
+      removeButton.addEventListener('click', () => this.removeBook(book.title, book.authorName));
+      list.appendChild(list1);
+      list.appendChild(removeButton);
+      booksList.appendChild(list);
+    });
+  }
 }
 
 const bookCollection = new BookCollection();
