@@ -1,4 +1,5 @@
 /* eslint no-use-before-define: "off" */
+/* eslint class-methods-use-this: "off" */
 class BookCollection {
   constructor() {
     this.allBooks = JSON.parse(localStorage.getItem('allBooks')) || [];
@@ -51,8 +52,10 @@ class BookCollection {
   }
 
   clearInputFields() {
-    this.titleInput.value = '';
-    this.authorInput.value = '';
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
+    titleInput.value = '';
+    authorInput.value = '';
   }
 }
 
