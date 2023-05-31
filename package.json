@@ -11,7 +11,7 @@
     "stylelint-scss": "^3.21.0"
   },
   "name": "awesome-book",
-  "description": "",
+  "description": "<a name=\"readme-top\"></a>",
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {

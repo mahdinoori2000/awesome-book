@@ -3,35 +3,35 @@ span {
 }
 
 .awesome-books {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .awesome-books h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .remove-btn {
-    width: 25%;
-    border-radius: 0.5rem;
-    box-shadow: 1px 2px;
-    background-color: aliceblue;
+  width: 25%;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px;
+  background-color: aliceblue;
 }
 
 .add-btn {
-    width: 37.91%;
-    background-color: aliceblue;
-    border-radius: 0.5rem;
-    box-shadow: 1px 2px;
+  width: 37.91%;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px;
 }
 
 .add-button {
-    text-align: end;
+  text-align: end;
 }
 
 ul {
-  width: 25rem;  
+  width: 25rem;
   list-style: none;
   padding-left: 0;
   border: 2px solid #2b2d42;
@@ -50,16 +50,16 @@ ul {
 }
 
 .list-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
 }
 
 .list-item:nth-child(odd) {
-    background-color: #8d99ae;
+  background-color: #8d99ae;
 }
 
 .list-item span {
-    font-size: 1.1rem;
-    font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
