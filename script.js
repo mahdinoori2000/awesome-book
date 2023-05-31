@@ -19,7 +19,9 @@ class BookCollection {
     }
   }
   removeBook(title, author) {
-    this.allBooks = this.allBooks.filter(book => book.title !== title || book.authorName !== author);
+    this.allBooks = this.allBooks.filter(
+      (book) => book.title !== title || book.authorName !== author
+    );
     this.saveCollection();
     this.showBooks();
   }
@@ -35,11 +37,22 @@ class BookCollection {
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
       removeButton.classList.add('remove-btn');
-      removeButton.addEventListener('click', () => this.removeBook(book.title, book.authorName));
+      removeButton.addEventListener('click', () =>
+        this.removeBook(book.title, book.authorName)
+      );
       list.appendChild(list1);
       list.appendChild(removeButton);
       booksList.appendChild(list);
     });
+  }
+  saveCollection() {
+    localStorage.setItem('allBooks', JSON.stringify(this.allBooks));
+  }
+  clearInputFields() {
+    const titleInput = document.getElementById('title');
+    const authorInput = document.getElementById('author');
+    titleInput.value = '';
+    authorInput.value = '';
   }
 }
 
