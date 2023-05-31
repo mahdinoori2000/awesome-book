@@ -50,11 +50,9 @@ class BookCollection {
     localStorage.setItem('allBooks', JSON.stringify(this.allBooks));
   }
 
-  static clearInputFields() {
-    const titleInput = document.getElementById('title');
-    const authorInput = document.getElementById('author');
-    titleInput.value = '';
-    authorInput.value = '';
+  clearInputFields() {
+    this.titleInput.value = '';
+    this.authorInput.value = '';
   }
 }
 
