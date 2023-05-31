@@ -19,9 +19,11 @@
       </ul>
     </header>
     <main class="awesome-books">
-      <h1>Awesome Books</h1>
-      <ul id="book-list"></ul>
-      <div class="add">
+      <section class="list hidden">
+        <h1>Awesome Books</h1>
+        <ul id="book-list"></ul>
+      </section>
+      <section class="add hidden">
         <h1>Add a new book</h1>
         <article class="add-book">
           <input type="text" id="title" placeholder="Title" />
@@ -30,8 +32,12 @@
             <button class="add-btn" id="add-btn">Add</button>
           </div>
         </article>
-      </div>
+      </section>
+      <section class="contact"></section>
     </main>
+    <footer class="copyright">
+      <h2 class="copytight-header">Copyright</h2>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
